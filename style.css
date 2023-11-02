@@ -1,0 +1,146 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary--Very-dark-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* overflow: hidden; */
+}
+
+:root {
+    /* main background */
+    --primary--Very-dark-blue: hsl(233, 47%, 7%);
+    /* (card background) */
+    --Dark-desaturated-blue: hsl(244, 38%, 16%);
+    --Soft-violet: rgb(170, 92, 219);
+    /* (main heading, stats) */
+    --natural-White: hsl(0, 0%, 100%);
+    /* (main paragraph) */
+    --natural-Slightly-transparent-white: hsla(0, 0%, 100%, 0.75);
+    /* (stat headings) */
+    --natural-Slightly-transparent-white: hsla(0, 0%, 100%, 0.6);
+}
+
+.main {
+    /* background-color: var(--Dark-desaturated-blue); */
+    width: 70%;
+    height: 500px;
+    border-radius: 5px;
+    display: flex;
+}
+
+.left {
+
+    /* font-size: 20px; */
+    /* border: 2px solid yellow; */
+    width: 50%;
+    background-color: var(--Dark-desaturated-blue);
+    border-radius: 5px;
+}
+
+.left-wrapper {
+    width: 70%;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px 0px;
+    height: 100%;
+    color: aliceblue;
+    text-align: left;
+}
+
+.left .heading {
+
+    /* border: 2px solid red; */
+    /* margin-left:10px; */
+    font-size: 1.3em;
+}
+
+.heading .span {
+    color: var(--Soft-violet);
+}
+
+.paragraph {
+    word-spacing: 2px;
+    color: var(--natural-Slightly-transparent-white);
+    line-height: 1.5rem;
+}
+
+.like {
+    width: 100%;
+    /* height: 300px; */
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.like div {
+    text-align: left;
+}
+
+.like div span {
+    color: var(--natural-Slightly-transparent-white);
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+/* .right {
+    background-color: var(--Soft-violet);
+} */
+
+.right {
+    width: 50%;
+    background-image: url(./images/image-header-desktop.jpg);
+    background-size: cover;
+    border-radius: 5px;
+    /* border: 8px solid green; */
+}
+
+.right .overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(170, 92, 219, 0.5);
+
+}
+
+/* MEDIA         QURIEA */
+@media (max-width:600px) {
+    .main {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .left {
+        width: 100%;
+        height: 60%;
+    }
+
+    .left-wrapper {
+        width: 85%;
+    }
+
+    .left .heading {
+        font-size: 0.7rem;
+    }
+
+    .right {
+        width: 100%;
+        height: 40%;
+        border: 3px solid blue;
+        background-image: url(./images/image-header-mobile.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+}
